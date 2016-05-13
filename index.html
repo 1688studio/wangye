@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+<head>
+	<title>主页</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript">   
+
+
+
+var msg="窗边昨天你坐过的地方,\r\n还留有一丝的温暖，\r\n窗外你的身影越走越远，\r\n不曾回头再看一眼……"
+var len=msg.length
+
+var seq=0
+/*打字机速度*/
+var speed=300
+var message
+
+
+/* 打字机的特效方法*/
+function type()
+{
+	
+		message =msg.substring(0,seq);
+
+	
+	
+  lovetext1.innerText=message;
+   
+
+if(seq==len){
+/*清除打字特效和闪动的特效*/
+int=window.clearInterval(int);
+inttimeout=window.clearTimeout(inttimeout)
+}
+else
+seq++
+var inttimeout=self.setTimeout("type()",speed)
+}
+
+var xiabiao=0
+
+/* 光标闪动的执行方法*/
+function changeColor(){ 
+var color="#000000|#FFFFFF"; 
+color=color.split("|"); 
+if(xiabiao==0){
+xiabiao=1;
+document.getElementById("lovetext2").style.color=color[0];
+ }else
+{
+
+xiabiao=0;
+document.getElementById("lovetext2").style.color=color[1];
+
+}
+} 
+/* 每100毫秒执行一次 */
+var int=self.setInterval("changeColor()",100); 
+
+
+
+
+</script>
+
+
+
+<style type="text/css">
+body{ 
+background-image:url(./images/love.jpg);
+
+background-repeat:no-repeat;
+background-size:cover;}
+.love{ margin:220px 0 0 100px; FONT-SIZE: 10pt; COLOR: #000000 ;}
+/* css注释：为了观察效果设置宽度 边框 高度等样式 */
+
+//配适应手机
+#header {
+  background:url(medium-density-image.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+  /* CSS for high-density screens */
+  #header {
+    background:url(high-density-image.png);
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+  /* CSS for low-density screens */
+  #header {
+    background:url(low-density-image.png);
+  }
+}
+
+
+</style>
+
+</head>
+
+<META content="MSHTML 6.00.3790.186" name=GENERATOR></HEAD>
+<body onload=type()>
+	
+<div style="position:relative">
+   <div style="position:absolute;left:0;top:0" id="lovetext" class="love"><span id="lovetext1" FONT-SIZE: 10pt;>
+</span>
+	<span id="lovetext2">_</span></div>
+   <div style="position:absolute;left:0;top:0"></div>
+
+
+   <audio  autoplay="autoplay" loop="loop" >
+			<source src="http://sc.111ttt.com/up/mp3/290058/DB70FAC418FC1D2464A3D993F526E098.mp3" loop="loop" type="audio/mpeg">
+                     
+			你的浏览器不支持html5 audio标签
+		</audio>
+</div>	
+</body>
+</html>
